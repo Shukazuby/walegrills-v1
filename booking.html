@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/794a4e4e58.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+   <title>Menu</title>
+</head>
+<body>
+   <header class=" lg:flex justify-between ">
+    <div class="lg:w-[20%] ">
+        <img src="Asset/menuHero 1.png" alt="" class="w-[40%] lg:w-[100%]">
+    </div>
+    <div class="ml-24 lg:mt-40 lg:ml-[none]">
+        <h3 class="lg:text-4xl lg:w-[60%] font-bold">We serve you and your guests Nigerian Delicacies. Book us for your events Today!</h3>
+    </div>
+    <div class="mt-3 ">
+        <a href="index.html">
+            <h3 class="text-black font-bold text-3xl  pr-8 items-center flex gap-1 ml-40 my-6 lg:ml-0 lg:my-0" > <span class="text-[#E73635]"><i class="fa-solid fa-fire text-4xl"></i></span >WaleGrills</h3>
+        </a>
+    </div>
+   </header> 
+
+   <section class="flex items-center justify-between">
+    <div class="lg:w-[60%] ml-10">
+        <h2 class="lg:text-3xl text-[#E73635] font-semibold lg:w-[50%]">Feel Nigeria in London. Eat Nigerian food away from home. </h2>
+    </div>
+    <div class="lg:w-[40%]">
+        <img src="Asset/menuHero 2.png" alt="" class="sm:none">
+    </div>
+   </section>
+
+   <section class="mt-20">
+    <h1 class="text-3xl font-bold text-center">Event Menu</h1>
+    <h3 class=" font-semibold text-center italic">Select items from the menu</h3>
+   </section>
+
+   <section class="">
+    <div class="lg:flex  lg:flex-row-reverse lg:justify-between p-10 items-center">
+    <div class="">
+            <a href="" class=""><button class=" p-2 bg-[#E73635] rounded-lg font-semibold ml-[11.5rem] lg:ml-[none] ">Guide</button> </a>   
+     </div>
+    <form action="" class="">
+        <h1 class="text-xl font-bold">Your Info</h1>
+        <input type="text" class="outline-none border border-gray-400 rounded-md pr-28 mb-2 placeholder:text-sm placeholder:pl-1 text-sm pl-2 py-1" placeholder="Enter your name" id="ClientName" onchange="clientData()"><br>
+        <input type="text" class="outline-none border border-gray-400 rounded-md mb-2 placeholder:text-sm placeholder:pl-1 text-sm pl-2 py-1" placeholder="Event type" id="ClientEvent" onchange="clientData()">
+        <input type="number" class="outline-none border border-gray-400 rounded-md mb-2 w-[6rem] placeholder:text-sm placeholder:pl-1 text-sm pl-2 py-1" placeholder="Guest Size" id="ClientGuest" onchange="adminFees()"><br>
+        <input type="date" class="outline-none border border-gray-400 rounded-md mb-2 w-[6rem] placeholder:text-sm placeholder:pl-1 text-sm pl-2 py-1" placeholder="Date" id="EventDate" onchange="clientData()">
+        <input type="text" class="outline-none border border-gray-400 rounded-md mb-2 placeholder:text-sm placeholder:pl-1 text-sm pl-2 py-1" placeholder="Event Venue" id="EventVenue" onchange="clientData()">
+
+        <input type="email" class="outline-none border border-gray-400 rounded-md pr-28 mb-2 placeholder:text-sm placeholder:pl-1 text-sm pl-2 py-1 " placeholder="Your Email" id="ClientEmail" onchange="clientData()">
+    </form>
+    </div>
+   </section>
+
+    <section class="shadow-2xl shadow-black ">
+        <div class="container lg:flex pl-8 pt-10 gap-5 ">
+            <!-- starters/Canepes -->
+    <div class="food-items lg:w-[33.3%] items-center mb-4  "> 
+    <h2 class="text-xl font-semibold mb-4">Starters/Canapes</h2>
+    <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Puff Puff" data-price="26.00" data-image="asset/Burger pic.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span>Puff Puff(60 balls)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                <span>£26.00</span>
+    </div>
+        
+    <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Samosa" data-price="45.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Samosa(40)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£45.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Spring rolls" data-price="45.00" data-image="jollof.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Spring rolls(40)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£45.00</span>
+    </div>
+    
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart" data-name="Grilled yam and sauce" data-price="75.00" data-image="Fried.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span>Grilled yam & sauce(30)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£75.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart" data-name="Fried yam and sauce" data-price="75.00" data-image="Fried.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span>Fries yam & sauce(30)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£75.00</span>
+     </div> 
+
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Battered prawn" data-price="50.00" data-image="jollof.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span>Battered prawn(30)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£50.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Battered prawn(30)" data-price="55.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Battered crab(30)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£55.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Mini Shawarma" data-price="85.00" data-image="jollof.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span>Mini Shawarma(20)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£85.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Fries" data-price="20.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Fries(10)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£20.00</span>
+    </div> 
+ </div>
+
+            <!-- Main dish -->
+    <div class="food-items lg:w-[33.3%] items-center mb-4"> 
+                <h2 class="text-xl font-semibold mb-4">Main Dish</h2>
+                <div class="food-item flex gap-3 mb-2">
+                    <input type="checkbox" class="add-to-cart" data-name="Chicken laps box" data-price="100.00" data-image="Fried.jpg">
+                    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                    <span class="">Chicken laps box(50)</span>
+                    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                    <span>£100.00</span>
+                </div> 
+                <div class="food-item flex gap-3 mb-2">
+                    <input type="checkbox" class="add-to-cart" data-name=" Chicken Wings box" data-price="100.00" data-image="jollof.jpg">
+                    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                    <span class="">Chicken wings box(120pc)</span>
+                    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                    <span>£100.00</span>
+                </div>
+
+        <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Whole chicken" data-price="95.00" data-image="asset/Burger pic.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span> Whole chicken(10)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£95.00</span>
+        </div>
+
+        <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart" data-name="Turkey wings box" data-price="85.00" data-image="Fried.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span>Turkey wings box(40)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£85.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Suya portions" data-price="120.00" data-image="jollof.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span>Suya portions(20)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£120.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Asun portions" data-price="130.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Asun portions(20)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£130.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart" data-name=" Sea bass box" data-price="80.00" data-image="jollof.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span class="">Sea bass Box(12)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£80.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Prawns portions" data-price="50.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span class="">Prawns portions(15)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£50.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Tilapia box" data-price="85.00" data-image="asset/Burger pic.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Tilapia box(20)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£85.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Corn box" data-price="50.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Corn box(30)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£50.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="plantain box" data-price="50.00" data-image="jollof.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Plantain box(25)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£50.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Ribs box" data-price="130.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Ribs box(30)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£130.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+        <input type="checkbox" class="add-to-cart" data-name=" Burgers" data-price="50.00" data-image="jollof.jpg">
+        <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+        <span class="">Burgers(20)</span>
+        <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+        <span>£50.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Hotdogs" data-price="50.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span class="">Hotdogs(20)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£50.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Marshmellows bag" data-price="20.00" data-image="asset/Burger pic.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>MarshMel. bags(30pc)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£20.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Lambs chops" data-price="40.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Lambs chops(10)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£40.00</span>
+    </div> 
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Pork chops" data-price="30.00" data-image="jollof.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Pork chops(12)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£30.00</span>
+    </div>
+
+    <div class="food-item flex gap-3 mb-2">
+    <input type="checkbox" class="add-to-cart" data-name="Beef steak" data-price="50.00" data-image="Fried.jpg">
+    <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+    <span>Beef steak(10)</span>
+    <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+    <span>£50.00</span>
+    </div> 
+
+</div>
+
+        <!-- Litres foods -->
+
+        <div class="food-items lg:w-[33.3%] items-center  mb-4"> 
+            <h2 class="text-xl font-semibold mb-4">Rice & Stews</h2>
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name="Jollof Rice" data-price="60.00" data-image="jollof.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span class="">Jollof Rice(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                <span>£60.00</span>
+            </div>
+            
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name="Fried Rice" data-price="70.00" data-image="Fried.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span>Fried Rice(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem] " value="1" min="1">
+                <span>£70.00</span>
+            </div> 
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name=" White Rice" data-price="40.00" data-image="jollof.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span class="">White Rice(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                <span>£40.00</span>
+            </div>
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Beef stew" data-price="100.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span class="">Beef stew(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£100.00</span>
+            </div> 
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name="Chicken stew" data-price="120.00" data-image="Fried.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span class="">Chicken stew(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                <span>£120.00</span>
+                </div> 
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Ass meat Stew" data-price="130.00" data-image="asset/Burger pic.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Ass. meat stew(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£130.00</span>
+            </div>
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Catfish stew" data-price="130.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Catfish(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£130.00</span>
+            </div> 
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Stewed chicken" data-price="110.00" data-image="jollof.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Stewed chicken(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£110.00</span>
+            </div>
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Stewed beef" data-price="85.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Stewed beef(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£85.00</span>
+            </div> 
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name="Efo rir0" data-price="140.00" data-image="jollof.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span class="">Efo riro(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                <span>£140.00</span>
+            </div>
+        
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name="Efo elegusi" data-price="150.00" data-image="Fried.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span>Efo elegusi(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem] " value="1" min="1">
+                <span>£150.00</span>
+            </div> 
+            <div class="food-item flex gap-3 mb-2">
+                <input type="checkbox" class="add-to-cart" data-name=" Ayamase sauce" data-price="100.00" data-image="jollof.jpg">
+                <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+                <span class="">Ayamase(14l)</span>
+                <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+                <span>£100.00</span>
+            </div>
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Ofada rice" data-price="60.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span class="">Ofada rice(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£60.00</span>
+            </div> 
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart outline-none border border-gray-500" data-name="Ewedu" data-price="60.00" data-image="asset/Burger pic.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Ewedu(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£60.00</span>
+            </div>
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Gizdodo" data-price="80.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Gizdodo(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£80.00</span>
+            </div> 
+            
+            <div class="food-item flex gap-3 mb-2">
+            <input type="checkbox" class="add-to-cart" data-name="Fried Hake" data-price="100.00" data-image="Fried.jpg">
+            <img src="Asset/Burger pic.jpg" alt="pic" class="w-[10%] lg:w-[10%] rounded-[50%] shadow-md shadow-black">
+            <span>Fried Hake(14l)</span>
+            <input type="number" class="quantity outline-none border border-gray-500 rounded-sm w-[3rem] max-h-[1.2rem]" value="1" min="1">
+            <span>£100.00</span>
+            </div> 
+        
+        </div>
+        
+
+        
+    </div>
+    <div class="border-left border-black p-6">
+
+    <div class="ml-2" id="ClientInfo">
+        <h2 class="text-lg font-semibold mb-2">Event Info</h2>
+    </div>
+
+    <div class="cart-preview ml-2 ">
+        <h2 class="text-lg font-semibold mb-2">Items</h2>
+        <ul id="cart" class="mb-1 ml-10">
+            
+        </ul>
+        <p class="ml-10 mt-5 text-md font-medium">Total: £<span id="total" class="font-normal">0.00</span></p>
+    </div>
+    <div class="ml-1 " id="admin">
+        <h2 class="text-lg font-semibold mb-2">Admin Fees</h2>
+        <p class="ml-10 mt-5 text-md font-medium">Admin Total: £<span id="admintotal" class="font-normal">0.00</span></p>
+    </div>
+    <div class="ml-1" id="subtotal">
+        <h2 class="text-lg font-semibold mb-2">Sub Total</h2>
+    </div>
+</div>
+    </section>
+
+   <script src="script.js"></script>
+
+</body>
+</html>
